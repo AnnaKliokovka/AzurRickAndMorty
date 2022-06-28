@@ -82,8 +82,6 @@ public class FinishMenu : MonoBehaviour, ILevelObserver
     private void Awake()
     {
         instance = this;
-
-
     }
 
     // Start is called before the first frame update

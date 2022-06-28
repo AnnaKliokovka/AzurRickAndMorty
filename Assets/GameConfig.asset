@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   labyrinthsStr:
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 25.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 26.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 27.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 28.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 29.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 30.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 31.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial 32.prefab
-  - Assets/Resources/Prefabs/Fruits/Labyrinth_apple.prefab
-  - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_1.prefab
+  - Assets/Resources/Prefabs/Rick and Morty/RickMaze_0lvl.prefab
+  - Assets/Resources/Prefabs/Rick and Morty/RickMaze_1lvl.prefab
+  - Assets/Resources/Prefabs/Rick and Morty/RickMaze_2lvl.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_berry.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_berry.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_berry.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_watermeloon.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_watermeloon.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_watermeloon.prefab
+  - Assets/Resources/Prefabs/Fruits/Labyrinth_grapes.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_2.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_3.prefab
   - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_4.prefab
@@ -148,17 +148,21 @@ MonoBehaviour:
   ball: {fileID: 4803738439568453723, guid: ef7f45f562fed4940b8d891a8ea3dc88, type: 3}
   ballBig: {fileID: 4803738439568453723, guid: b7516d6d81dd31c44af5ec7ddbb50a19, type: 3}
   ballMid: {fileID: 4803738439568453723, guid: 6e1e1ab17a5d0ca49aabbbb775f4175e, type: 3}
+  ballModel: {fileID: 7178072780186117284, guid: b4e04dcce3ec93b439244fb53a64f3ba,
+    type: 3}
+  ballLiquid: {fileID: -4961072520154056338, guid: 1ed4cc2edba459243b5f1543fedb3187,
+    type: 3}
   wavesCount: 3
   backgroundsStr:
-  - Assets/Resources/Textures/BG1.png
+  - Assets/Resources/Textures/RaMFon1.jpg
   - Assets/Resources/Textures/BG2.png
   - Assets/Resources/Textures/BG3.png
   - Assets/Resources/Textures/BG4.png
   - Assets/Resources/Textures/BG5.png
   - Assets/Resources/Textures/BG6.png
   - Assets/Resources/Textures/BG7.png
-  - Assets/Resources/Textures/BG8.png
-  - Assets/Resources/Textures/BG9.png
+  - Assets/Resources/Textures/RaMFon3.png
+  - Assets/Resources/Textures/RamFon2.jpg
   - Assets/Resources/Textures/BG10.png
   useImages: 1
   labMaterial: {fileID: 2100000, guid: 82b388ece78dc5d41a20116a48cd24f5, type: 2}

@@ -50,8 +50,9 @@ MonoBehaviour:
   rotationMultiplier: 500
   balls: []
   roof: {fileID: 5075909649857618397}
-  isNeedLoonka: 0
+  isNeedLoonka: 1
   isNeedShadows: 1
+  isBoss: 0
 --- !u!136 &8099376822522992802
 CapsuleCollider:
   m_ObjectHideFlags: 0

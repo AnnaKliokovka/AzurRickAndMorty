@@ -109,6 +109,7 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
     // Start is called before the first frame update
     void Start()
     {
+       
         Application.targetFrameRate = 60;
 
 #if UNITY_IOS
@@ -211,7 +212,13 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
         playerState.wave = 0;
 
         var ballsLevel = RemoteSettings.GetInt("ExtraBallsLevel", 3);
-        playerState.totalBalls = ((playerState.level + ballsLevel - 1) / ballsLevel) * RemoteSettings.GetInt("ballsPerLevel", 15) + RemoteSettings.GetInt("StartBallsCount", 20);
+        if (playerState.level<3)
+        {
+            if (playerState.level ==0) playerState.totalBalls = ((playerState.level + ballsLevel - 1) / ballsLevel) * RemoteSettings.GetInt("ballsPerLevel", 15) + RemoteSettings.GetInt("StartBallsCount", 20);
+            else if (playerState.level ==1) playerState.totalBalls = 5;
+            else playerState.totalBalls = 150;            
+        }
+        else playerState.totalBalls = ((playerState.level + ballsLevel - 1) / ballsLevel) * RemoteSettings.GetInt("ballsPerLevel", 15) + RemoteSettings.GetInt("StartBallsCount", 20);
         if (playerState.totalBalls > RemoteSettings.GetInt("maxBalls", 450)) playerState.totalBalls = RemoteSettings.GetInt("maxBalls", 450);
 
         var isBonusLevel = PlayerPrefs.GetInt("BonusLevel", 0) == 1;
@@ -374,7 +381,7 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
         var hasDifferentBalls = RemoteSettings.GetBool("hasDifferentBalls", false);
         var deep = 2;
 
-        var sq = (int)Mathf.Sqrt(max / 5) + 1;
+        var sq =  (int)Mathf.Sqrt(max / 5) + 1;
         var count = 0;
         for (var d = -deep; d <= deep; d++)
         {
@@ -382,18 +389,45 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
             {
                 float scaleFactor = Random.Range(0f, 1f);
                 int ballSize = count % 10;
-                if (ballSize < 7 || !hasDifferentBalls) ballSize = 0;
-                else if (ballSize < 9) ballSize = 1;
-                else if (ballSize < 10) ballSize = 2;
-                if (count >= max) continue;
-                var ball = Instantiate(ballSize == 2 ? gameConfig.ballBig : ballSize == 1 ? gameConfig.ballMid : gameConfig.ball, newLab.transform);
-                ball.transform.localPosition = Vector3.right * (j % sq - sq / 2) * 0.1f + Vector3.down * (j / sq - sq / 2) * 0.1f + Vector3.forward * d * 0.1f;
+                //Мои добавления
+                if (playerState.level < 3)
+                {
+                    Ball b = new Ball();
+                    if (playerState.level == 0) b = gameConfig.ball;
+                    if (playerState.level == 1) b = gameConfig.ballModel;
+                    else if (playerState.level == 2) b = gameConfig.ballLiquid;
 
-                var scale = RemoteSettings.GetFloat(ballSize == 0 ? "ballSize0" : ballSize == 1 ? "ballSize1" : "ballSize2", 1f);
-                ball.transform.localScale *= (scale - 1f) * (totalMax - max) / totalMax + 1f;
+                    if (ballSize < 7 || !hasDifferentBalls) ballSize = 0;
+                    else if (ballSize < 9) ballSize = 1;
+                    else if (ballSize < 10) ballSize = 2;
+                    if (count >= max) continue;
 
-                balls.Add(ball);
-                count++;
+                    var myBall = Instantiate(b);
+                    myBall.transform.localPosition = Vector3.right * (j % sq - sq / 2) * 0.1f + Vector3.down * (j / sq - sq / 2) * 0.1f + Vector3.forward * d * 0.1f;
+
+                    var scale = RemoteSettings.GetFloat(ballSize == 0 ? "ballSize0" : ballSize == 1 ? "ballSize1" : "ballSize2", 1f);
+                    myBall.transform.localScale *= (scale - 1f) * (totalMax - max) / totalMax + 1f;
+
+                    balls.Add(myBall);
+                    count++;
+                }
+                else
+                {
+                    //Код до моих правок
+                    if (ballSize < 7 || !hasDifferentBalls) ballSize = 0;
+                    else if (ballSize < 9) ballSize = 1;
+                    else if (ballSize < 10) ballSize = 2;
+
+                    if (count >= max) continue;
+                    var ball = Instantiate(ballSize == 2 ? gameConfig.ballBig : ballSize == 1 ? gameConfig.ballMid : gameConfig.ball, newLab.transform);
+                    ball.transform.localPosition = Vector3.right * (j % sq - sq / 2) * 0.1f + Vector3.down * (j / sq - sq / 2) * 0.1f + Vector3.forward * d * 0.1f;
+
+                    var scale = RemoteSettings.GetFloat(ballSize == 0 ? "ballSize0" : ballSize == 1 ? "ballSize1" : "ballSize2", 1f);
+                    ball.transform.localScale *= (scale - 1f) * (totalMax - max) / totalMax + 1f;
+
+                    balls.Add(ball);
+                    count++;
+                }
             }
         }
 
