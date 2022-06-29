@@ -4,7 +4,7 @@
 1. Собрать свой уровень, в стиле 3го уровня из игры (яблоко в разрезе). Это может быть какой-нибудь фрукт или объект в разрезе (например муравейник). 
 Я решила выполнить задание стилизованно под мультсериал Рик и Морти. Для первого уровня была использованна 3Д модель головы Рика. Модель была сделана мной в Blender (см. рисунок 1)
 <p align="center">
-  <img width="400" height="400" src="https://github.com/AnnaKliokovka/PicsForReadMe/raw/main//RickMaze.JPG">  
+  <img width="400" height="350" src="https://github.com/AnnaKliokovka/PicsForReadMe/raw/main//RickMaze.JPG">  
 </p>
 <p align="center"> 
   Рисунок 1 - 3д модель лабиринта для первого уровня
@@ -18,7 +18,7 @@
 </p>
 Лабииринт выполнен в виде банки (см. Рисунок 3)
 <p align="center">
-  <img width="400" height="400" src="https://github.com/AnnaKliokovka/PicsForReadMe/raw/main//BankaMaze.JPG">  
+  <img width="400" height="350" src="https://github.com/AnnaKliokovka/PicsForReadMe/raw/main//BankaMaze.JPG">  
 </p>
  <p align="center"> 
   Рисунок 3 - 3д модель лабиринта для второго уровня
