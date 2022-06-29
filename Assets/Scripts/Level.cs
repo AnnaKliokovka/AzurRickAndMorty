@@ -216,7 +216,7 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
         {
             if (playerState.level ==0) playerState.totalBalls = ((playerState.level + ballsLevel - 1) / ballsLevel) * RemoteSettings.GetInt("ballsPerLevel", 15) + RemoteSettings.GetInt("StartBallsCount", 20);
             else if (playerState.level ==1) playerState.totalBalls = 5;
-            else playerState.totalBalls = 150;            
+            else playerState.totalBalls = 35;            
         }
         else playerState.totalBalls = ((playerState.level + ballsLevel - 1) / ballsLevel) * RemoteSettings.GetInt("ballsPerLevel", 15) + RemoteSettings.GetInt("StartBallsCount", 20);
         if (playerState.totalBalls > RemoteSettings.GetInt("maxBalls", 450)) playerState.totalBalls = RemoteSettings.GetInt("maxBalls", 450);
@@ -480,7 +480,7 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
 
     private void ActivateRoof(int v)
     {
-        for (int i = 0; i < gameConfig.wavesCount; i++)
+        for (int i = 0; i < 1; i++)
         {
             var lab = labyrinths[i];
             lab.roof.SetActive(i == v);
@@ -490,7 +490,7 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
 
     private void ActivateBalls(int v)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < gameConfig.wavesCount; i++)
         {
             var lab = labyrinths[i];
             

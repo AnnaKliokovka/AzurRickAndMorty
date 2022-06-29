@@ -57,7 +57,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 11.53235, b: 0, a: 1}
+    - _Color: {r: 0.29984665, g: 1, b: 0.063545726, a: 0.7137255}
     - _EmissionColor: {r: 0.00081188726, g: 0.0006433824, b: 0.0006433824, a: 1}

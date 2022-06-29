@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   labyrinthsStr:
-  - Assets/Resources/Prefabs/Rick and Morty/RickMaze_0lvl.prefab
-  - Assets/Resources/Prefabs/Rick and Morty/RickMaze_1lvl.prefab
   - Assets/Resources/Prefabs/Rick and Morty/RickMaze_2lvl.prefab
-  - Assets/Resources/Prefabs/Fruits/Labyrinth_berry.prefab
-  - Assets/Resources/Prefabs/Fruits/Labyrinth_berry.prefab
-  - Assets/Resources/Prefabs/Fruits/Labyrinth_berry.prefab
-  - Assets/Resources/Prefabs/Fruits/Labyrinth_watermeloon.prefab
+  - Assets/Resources/Prefabs/Rick and Morty/BankaMaze_0lvl.prefab
+  - Assets/Resources/Prefabs/Rick and Morty/WeaponLvl.prefab
+  - Assets/Resources/Prefabs/Labyrinth_tutorial_gen_2.prefab
+  - Assets/Resources/Prefabs/Labyrinth_tutorial_gen2_6.prefab
+  - Assets/Resources/Prefabs/Labyrinth_tutorial 27.prefab
+  - Assets/Resources/Prefabs/Labyrinth_tri_8.prefab
   - Assets/Resources/Prefabs/Fruits/Labyrinth_watermeloon.prefab
   - Assets/Resources/Prefabs/Fruits/Labyrinth_watermeloon.prefab
   - Assets/Resources/Prefabs/Fruits/Labyrinth_grapes.prefab
@@ -152,7 +152,7 @@ MonoBehaviour:
     type: 3}
   ballLiquid: {fileID: -4961072520154056338, guid: 1ed4cc2edba459243b5f1543fedb3187,
     type: 3}
-  wavesCount: 3
+  wavesCount: 1
   backgroundsStr:
   - Assets/Resources/Textures/RaMFon1.jpg
   - Assets/Resources/Textures/BG2.png
@@ -161,7 +161,7 @@ MonoBehaviour:
   - Assets/Resources/Textures/BG5.png
   - Assets/Resources/Textures/BG6.png
   - Assets/Resources/Textures/BG7.png
-  - Assets/Resources/Textures/RaMFon3.png
+  - Assets/Resources/Textures/Fon1.jpg
   - Assets/Resources/Textures/RamFon2.jpg
   - Assets/Resources/Textures/BG10.png
   useImages: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
   ballMiddleMaterial: {fileID: 2100000, guid: a6fcf0741bec69745884a0e005a7fa9f, type: 2}
   ballBigMaterial: {fileID: 2100000, guid: 23b1dcf6f98548a469d3b6f218dcde70, type: 2}
   ballColors:
-  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.51441795, g: 0.8018868, b: 0.54026526, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
